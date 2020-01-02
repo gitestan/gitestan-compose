@@ -1,8 +1,4 @@
-version: "2"
-
-networks:
-  gitea:
-    external: false
+version: "3"
 
 services:
   server:
@@ -11,8 +7,6 @@ services:
       - USER_UID=1000
       - USER_GID=1000
     restart: always
-    networks:
-      - gitea
     volumes:
       - ./gitea:/data
       - /etc/timezone:/etc/timezone:ro
